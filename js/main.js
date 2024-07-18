@@ -42,17 +42,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     btnLogin.addEventListener('click', () => {
-        window.location.href = './pages/login.html';
+        window.location.href = '../pages/login.html';
     });
 
 
     btnCrearCuenta.addEventListener('click', () => {
-        window.location.href = './pages/registro.html';
+        window.location.href = '../pages/registro.html';
     });
 
 
     btnContacto.addEventListener('click', () => {
-        window.location.href = './pages/contacto.html';
+        window.location.href = '../pages/contacto.html';
     });
 });
 
