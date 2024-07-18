@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sitio oficial de veterinaria Bienestar Animal - Bahía Blanca. Pet shop | Alimentos balanceados | Accesorios | Consultorio veterinario | Cirugías | Ecografías | Laboratorio | Farmacia veterinaria | Peluquería canina | Envíos a domicilio."
+    />
+    <meta
+      name="keywords"
+      content="Veterinaria, Bienestar Animal, Pet Shop, Alimentos balanceados, Accesorios, Consultorio veterinario, Cirugías, Ecografías, Laboratorio, Farmacia veterinaria, Peluquería canina, Envíos a domicilio, Royal Canin, Pro Plan, Eukanuba, Excellent, Performance, Sieger, Maxxium, Agility, Old Prince, Kongo, Fawna, Vital Can, Balanced, Nutrique, Monami, Provet, Canfeed, Catfeed, Perros, Gatos, Bahía Blanca"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/faviconBA-32x32.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>registro Usuario - Bienestar Animal</title>
+  </head>
+
+  <body>
+    <section class="programa">
+      <h1>Bienestar Animal</h1>
+      <h2>Agregar Usuario</h2>
+
+      <!-- FORMULARIO AGREGAR USUARIO -->
+      <form id="agregarForm">
+        <p class="pLogin">
+          Para registrar un nuevo usuario vamos a pedirte los siguientes datos:
+        </p>
+
+        <!-- Nombre y apellido -->
+        <label for="inputNombreApellido" class="labelNombreApellido"
+          >Nombre y apellido</label
+        >
+        <input
+          type="text"
+          id="inputNombreApellido"
+          class="inputNombreApellido"
+          name="agregarNombre"
+          placeholder="Nombre y apellido"
+          required
+        />
+        <div id="resultados"></div>
+        <!--NEW-->
+
+        <!-- Correo electrónico -->
+        <label for="inputRegistroMail" class="labelRegistroMail"
+          >Correo electrónico:</label
+        >
+        <input
+          type="email"
+          class="inputRegistroMail"
+          id="inputRegistroMail"
+          name="email"
+          placeholder="Correo electrónico"
+          required
+        />
+
+        <!-- Nombre de usuario -->
+        <label for="inputRegistroUsuario" class="labelRegistroUsuario"
+          >Nombre de usuario:</label
+        >
+        <input
+          type="text"
+          class="inputRegistroUsuario"
+          id="inputRegistroUsuario"
+          name="nombreUsuario"
+          placeholder="Nombre de usuario"
+          required
+        />
+
+        <!-- Password -->
+        <label for="inputRegistroPassword" class="labelRegistroPassword"
+          >Ingrese su password:</label
+        >
+        <input
+          type="password"
+          class="inputRegistroPassword"
+          id="inputRegistroPassword"
+          name="password"
+          placeholder="Ingrese su password"
+          required
+          autocomplete=""
+        />
+
+        <div id="mensajeUsuarioAgregado"></div>
+
+        <!-- Botón registrar usuario -->
+        <button type="button" id="btnAgregarUsuario">Registrar</button>
+      </form>
+
+      <!-- BOTON VOLVER A MENU PRINCIPAL -->
+      <button type="button" id="btnMenu">Menú principal</button>
+    </section>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../js/facts.js"></script>
+    <script src="../js/Mascota.js"></script>
+    <script src="../js/Usuario.js"></script>
+    <script src="../js/Veterinaria.js"></script>
+    <script src="../js/registroUsuario.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

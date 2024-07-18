@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sitio oficial de veterinaria Bienestar Animal - Bahía Blanca. Pet shop | Alimentos balanceados | Accesorios | Consultorio veterinario | Cirugías | Ecografías | Laboratorio | Farmacia veterinaria | Peluquería canina | Envíos a domicilio."
+    />
+    <meta
+      name="keywords"
+      content="Veterinaria, Bienestar Animal, Pet Shop, Alimentos balanceados, Accesorios, Consultorio veterinario, Cirugías, Ecografías, Laboratorio, Farmacia veterinaria, Peluquería canina, Envíos a domicilio, Royal Canin, Pro Plan, Eukanuba, Excellent, Performance, Sieger, Maxxium, Agility, Old Prince, Kongo, Fawna, Vital Can, Balanced, Nutrique, Monami, Provet, Canfeed, Catfeed, Perros, Gatos, Bahía Blanca"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/faviconBA-32x32.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Registro - Bienestar Animal</title>
+  </head>
+
+  <body>
+    <section class="programa">
+      <h1>Bienestar Animal</h1>
+      <h2>Crear cuenta</h2>
+
+      <!-- FORMULARIO CREAR CUENTA -->
+      <form class="registroForm">
+        <p class="pLogin">
+          Para crear una nueva cuenta vamos a pedirte los siguientes datos:
+        </p>
+
+        <!-- Nombre y apellido -->
+        <label for="inputNombreCompleto" class="labelNombreCompleto"
+          >Nombre y apellido:</label
+        >
+        <input
+          type="text"
+          class="inputNombreCompleto"
+          id="inputNombreCompleto"
+          name="inputNombreCompleto"
+          placeholder="Nombre y apellido"
+          required
+        />
+
+        <!-- Correo electrónico -->
+        <label for="inputMail" class="labelEmail">Correo electrónico:</label>
+        <input
+          type="email"
+          class="inputMail"
+          id="inputMail"
+          name="inputMail"
+          placeholder="ejemplo@mail.com"
+          required
+          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+          title="El correo debe contener un texto después del '@'"
+          required
+        />
+
+        <!-- Nombre de usuario -->
+        <label for="inputNuevoUsuario" class="labelNuevoUsuario"
+          >Nombre de usuario:</label
+        >
+        <input
+          type="text"
+          class="inputNuevoUsuario"
+          id="inputNuevoUsuario"
+          name="inputNuevoUsuario"
+          placeholder="Nombre de usuario"
+          required
+        />
+
+        <!-- Password -->
+        <label for="inputPassword" class="labelPassword"
+          >Ingrese su password:</label
+        >
+        <input
+          type="password"
+          class="inputPassword"
+          id="inputPassword"
+          name="inputPassword"
+          placeholder="Ingrese su password"
+          required
+          autocomplete=""
+        />
+
+        <!-- Checkbox términos y condiciones -->
+        <label for="aceptarTerminos" class="terminosCheckbox"
+          >Acepto los
+          <a id="terminosCondiciones">términos y condiciones</a>.</label
+        >
+        <input
+          type="checkbox"
+          value="accept"
+          id="aceptarTerminos"
+          name="aceptarTerminos"
+          required
+        />
+
+        <div id="clickMe"></div>
+
+        <div id="terminos"></div>
+
+        <div id="mensajeUsuarioAgregado"></div>
+        <!-- NEW -->
+
+        <!-- BOTON CREAR CUENTA -->
+        <button class="btnRegistroNuevoUsuario" id="btnRegistroNuevoUsuario">
+          Crear cuenta
+        </button>
+      </form>
+
+      <!-- BOTON VOLVER A INICIO -->
+      <button id="btnInicio">Volver a inicio</button>
+    </section>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../js/facts.js"></script>
+    <script src="../js/Mascota.js"></script>
+    <script src="../js/Usuario.js"></script>
+    <script src="../js/Veterinaria.js"></script>
+    <script src="../js/registro.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

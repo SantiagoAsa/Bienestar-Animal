@@ -1,0 +1,656 @@
+:root {
+  margin: 0;
+  padding: 0;
+
+  --bg-color: #1e1d1f;
+  --pg-color: #404040;
+  --text-color: #f2f2f2;
+  --text-secondary: #ffc400;
+  --border-color: #09b9ff;
+  --border-secondary: #abf1ff;
+  --error-color: #ff3333;
+  --ok-color: #00c71b;
+
+  background-image: url(../assets/img/bgdog.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+@font-face {
+  font-family: "Mission-Script";
+  src: url(../assets/fonts/Mission-Script.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Winterstorm";
+  src: url(../assets/fonts/Winterstorm-MVagp.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OVSoge";
+  src: url(../assets/fonts/OVSoge-Regular.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ESTILOS GENERALES */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  max-height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.programa {
+  width: 450px;
+  height: auto;
+  background: var(--pg-color);
+  border: 4px solid var(--border-color);
+  box-shadow: 0 0 20px;
+  border-radius: 16px;
+  margin: 50px auto;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  display: grid;
+}
+
+h1 {
+  font-size: 3.7rem;
+  font-family: "Mission-Script";
+  font-weight: normal;
+  text-align: center;
+  margin: 10px 0 10px 0;
+  padding-bottom: 10px;
+  color: var(--text-color);
+  border-bottom: 2px solid var(--border-color);
+}
+
+/* INDEX */
+
+button {
+  width: 100%;
+  font-weight: bold;
+  padding: 8px 12px;
+  margin: 10px 0;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--pg-color);
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+button:hover {
+  font-weight: bold;
+  background: var(--border-color);
+  color: var(--bg-color);
+  border: 2px solid var(--text-color);
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--border-color);
+}
+
+/* CONTACTO */
+
+h2 {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1rem;
+  text-align: left;
+  color: var(--text-color);
+}
+
+.labelContacto,
+.labelEmail,
+.labelMensaje {
+  color: var(--text-color);
+}
+
+.inputContacto,
+.inputEmail,
+.txtMensaje {
+  display: block;
+  width: 98%;
+  margin: 5px auto 10px auto;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.txtMensaje {
+  resize: none;
+  height: 200px;
+}
+
+.inputContacto::placeholder,
+.inputEmail::placeholder,
+.txtMensaje::placeholder {
+  opacity: 0;
+}
+
+.btnEnviarContacto {
+  display: block;
+  margin: 20px auto 10px auto;
+}
+
+.pMensajeOk {
+  color: var(--ok-color);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* LOG IN USUARIO*/
+
+.loginForm {
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.labelUsername,
+.labelPassword {
+  color: var(--text-color);
+}
+
+.inputUsername,
+.inputPassword {
+  display: block;
+  width: 98%;
+  margin: 5px auto 10px auto;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inputUsername::placeholder,
+.inputPassword::placeholder {
+  opacity: 0;
+}
+
+.labelCheckbox {
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.pReg {
+  font-size: 1rem;
+  text-align: left;
+  color: var(--text-color);
+}
+
+.pReg a {
+  display: block;
+  color: var(--border-secondary);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.pReg a:hover {
+  color: var(--border-color);
+}
+
+.pLogin {
+  margin-top: 0;
+}
+
+.mensajeError {
+  color: var(--error-color);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.mensajeExito {
+  color: var(--ok-color);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#userData {
+  color: var(--text-secondary);
+  font-size: 16px;
+  margin: 10px auto 0 auto;
+  text-transform: capitalize;
+}
+
+.contenedorLogin {
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* REGISTRO - CREAR CUENTA */
+
+.registroForm {
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.inputNuevoUsuario,
+.inputMail,
+.inputPrimeraPassword,
+.inputNombreCompleto {
+  display: block;
+  width: 98%;
+  margin: 5px auto 10px auto;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inputNuevoUsuario::placeholder,
+.inputMail::placeholder,
+.inputPrimeraPassword::placeholder,
+.inputNombreCompleto::placeholder {
+  opacity: 0;
+}
+
+.labelEmail,
+.labelNuevoUsuario,
+.labelMail,
+.labelPrimeraPassword,
+.labelNombreCompleto {
+  color: var(--text-color);
+}
+
+.terminosCheckbox {
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.terminosCheckbox a {
+  color: var(--border-secondary);
+}
+
+.terminosCheckbox a:hover {
+  color: var(--border-color);
+}
+
+.pTermCond {
+  color: var(--border-secondary);
+  font-size: 12px;
+  text-align: justify;
+}
+
+.pClickMe,
+.pCompletarCampos {
+  color: var(--error-color);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.pUsuarioOk {
+  color: var(--ok-color);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#userData {
+  color: var(--text-secondary);
+  font-size: 16px;
+  margin: 10px auto 0 auto;
+  text-transform: capitalize;
+}
+
+/* REGISTRAR NUEVO USUARIO */
+
+.usuarioForm {
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.inputNombreApellido,
+.inputDomicilioCalle,
+.inputDomicilioNumero,
+.inputTelefono,
+.inputLocalidad {
+  display: block;
+  width: 98%;
+  margin: 10px auto;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~ MENU ~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~ VER USUARIOS REGISTRADOS ~~~~~ */
+
+.verUsuariosStyle {
+  height: 200px;
+  overflow: auto;
+  background-color: var(--text-color);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.verUsuariosStyle h4 {
+  color: var(--bg-color);
+  font-size: 1.5rem;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.verUsuariosStyle p {
+  color: var(--bg-color);
+  font-size: 16px;
+  margin: 0;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+/* ~~~~~ BUSCAR USUARIO REGISTRADO ~~~~~ */
+
+.hidden {
+  display: none;
+}
+
+.buscarUsuarioStyle {
+  height: 200px;
+  overflow: auto;
+  background-color: var(--text-color);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.buscarUsuarioStyle h4 {
+  color: var(--bg-color);
+  font-size: 1.5rem;
+  margin: 0 auto 20px auto;
+  font-weight: bold;
+}
+
+.buscarUsuarioStyle p {
+  color: var(--bg-color);
+  font-size: 16px;
+  margin: 0;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.buscarUsuarioStyle button {
+  display: block;
+  margin: 25px auto;
+  width: 50%;
+}
+
+#name {
+  display: block;
+  width: 98%;
+  margin: 5px auto 10px auto;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#name::placeholder {
+  opacity: 0;
+}
+
+/* ~~~~~ AGREGAR USUARIO ~~~~~ */
+
+#agregarForm {
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.labelNombreApellido,
+.labelRegistroMail,
+.labelRegistroUsuario,
+.labelRegistroPassword {
+  color: var(--text-color);
+}
+
+.inputNombreApellido,
+.inputRegistroMail,
+.inputRegistroUsuario,
+.inputRegistroPassword {
+  display: block;
+  width: 98%;
+  margin: 10px auto;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inputNombreApellido::placeholder,
+.inputRegistroMail::placeholder,
+.inputRegistroUsuario::placeholder,
+.inputRegistroPassword::placeholder {
+  opacity: 0;
+}
+
+.pUsuarioAgregado {
+  color: var(--ok-color);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.pUsuarioError {
+  color: var(--error-color);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* ~~~~~ VER MASCOTAS REGISTRADAS ~~~~~ */
+
+.verMascotasStyle {
+  height: 300px;
+  overflow: auto;
+  background-color: var(--text-color);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.verMascotasStyle h4 {
+  color: var(--bg-color);
+  font-size: 1.5rem;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.verMascotasStyle p {
+  color: var(--bg-color);
+  font-size: 16px;
+  margin: 0;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+/* ~~~~~ BUSCAR MASCOTA ~~~~~ */
+
+.oculto {
+  display: none;
+}
+
+.buscarMascotaStyle {
+  height: 200px;
+  overflow: auto;
+  background-color: var(--text-color);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.buscarMascotaStyle h4 {
+  color: var(--bg-color);
+  font-size: 1.5rem;
+  margin: 0 auto 20px auto;
+  font-weight: bold;
+}
+
+.buscarMascotaStyle p {
+  color: var(--bg-color);
+  font-size: 16px;
+  margin: 0;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.buscarMascotaStyle button {
+  display: block;
+  margin: 25px auto;
+  width: 50%;
+}
+
+#nameMascota {
+  display: block;
+  width: 98%;
+  margin: 5px auto 10px auto;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#nameMascota::placeholder {
+  opacity: 0;
+}
+
+#especieMascota {
+  display: block;
+  width: 100%;
+  margin: 5px auto 10px auto;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ~~~~~ REGISTRO MASCOTA ~~~~~ */
+
+.mascotaForm {
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.labelNombreTutor,
+.labelEspecie,
+.labelRaza,
+.labelSexo,
+.labelNombreMascota,
+.labelEdad,
+.labelPeso {
+  color: var(--text-color);
+}
+
+.inputNombreTutor,
+.inputEspecie,
+.inputRaza,
+.inputSexo,
+.inputNombreMascota,
+.inputEdad,
+.inputPeso {
+  display: block;
+  width: 98%;
+  margin: 10px auto;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.inputNombreTutor::placeholder,
+.inputRaza::placeholder,
+.inputNombreMascota::placeholder,
+.inputEdad::placeholder,
+.inputPeso::placeholder {
+  opacity: 0;
+}
+
+.pMensajePeso,
+.pMensajeEdad {
+  color: var(--error-color);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.pMensajeRegistro {
+  color: var(--ok-color);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.pMensajeRegistroNoExitoso {
+  color: var(--error-color);
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#resultados {
+  background-color: var(--text-color);
+  max-height: 150px;
+  overflow: auto;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.result-item {
+  padding-left: 10px;
+}
+
+/* CALCULADOR */
+
+.contenedorCalculador {
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.contenedorCalculador label {
+  color: var(--text-color);
+}
+
+#especiesCalc,
+#edadCalc,
+#pesoCalc,
+#actividadCalc,
+#sobrepesoCalc,
+#pesoIdeal {
+  display: block;
+  width: 98%;
+  margin: 10px auto;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#resultadoCalc {
+  color: var(--text-secondary);
+  text-align: center;
+  font-family: "Arial";
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.pMensajeEdadCalc,
+.pMensajePesoCalc,
+.pMensajeSobrepesoCalc {
+  color: var(--error-color);
+}

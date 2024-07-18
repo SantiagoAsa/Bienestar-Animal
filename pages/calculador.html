@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sitio oficial de veterinaria Bienestar Animal - Bahía Blanca. Pet shop | Alimentos balanceados | Accesorios | Consultorio veterinario | Cirugías | Ecografías | Laboratorio | Farmacia veterinaria | Peluquería canina | Envíos a domicilio."
+    />
+    <meta
+      name="keywords"
+      content="Veterinaria, Bienestar Animal, Pet Shop, Alimentos balanceados, Accesorios, Consultorio veterinario, Cirugías, Ecografías, Laboratorio, Farmacia veterinaria, Peluquería canina, Envíos a domicilio, Royal Canin, Pro Plan, Eukanuba, Excellent, Performance, Sieger, Maxxium, Agility, Old Prince, Kongo, Fawna, Vital Can, Balanced, Nutrique, Monami, Provet, Canfeed, Catfeed, Perros, Gatos, Bahía Blanca"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/faviconBA-32x32.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Calculador de Alimento - Bienestar Animal</title>
+  </head>
+
+  <body>
+    <section class="programa">
+      <h1>Bienestar Animal</h1>
+      <h2>Calculador de Ración de Alimento para Mascotas</h2>
+
+      <div class="contenedorCalculador">
+        <!-- CALCULADOR -->
+        <!-- Especie -->
+        <label for="especiesCalc">Especie:</label>
+        <select id="especiesCalc">
+          <option value="gato">Gato</option>
+          <option value="perro">Perro</option>
+        </select>
+
+        <!-- Edad -->
+        <label for="edadCalc">Edad (en años):</label>
+        <input type="number" id="edadCalc" min="0" />
+
+        <div id="edadMascotaCalc"></div>
+
+        <!-- Peso -->
+        <label for="pesoCalc">Peso (en kg):</label>
+        <input type="number" id="pesoCalc" min="1" />
+
+        <div id="pesoMascotaCalc"></div>
+
+        <!-- Nivel de actividad -->
+        <label for="actividadCalc">Nivel de actividad:</label>
+        <select id="actividadCalc">
+          <option value="alta">Alta</option>
+          <option value="media">Media</option>
+          <option value="baja">Baja</option>
+        </select>
+
+        <!-- Sobrepeso ? -->
+        <label for="sobrepesoCalc">¿Tiene sobrepeso?</label>
+        <select id="sobrepesoCalc">
+          <option value="no">No</option>
+          <option value="si">Sí</option>
+        </select>
+
+        <!-- Peso ideal -->
+        <label for="pesoIdeal"
+          >Peso ideal (solo si tiene sobrepeso, en kg):</label
+        >
+        <input type="number" id="pesoIdeal" min="1" style="display: none" />
+
+        <div id="pesoIdealMascotaCalc"></div>
+
+        <!-- BOTON CALCULADOR -->
+        <button id="botonCalculadora">Calcular ración diaria</button>
+
+        <!-- Resultado -->
+        <h3 id="resultadoCalc"></h3>
+
+        <!-- Información adicional alimento -->
+        <p class="pCalc">
+          Estos valores son estimativos, pueden variar según la calidad del
+          alimento, tipo y orígen de la proteína, índice calórico y materia
+          grasa. Ante cualquier duda consulte a su veterinario/a de cabecera.
+        </p>
+      </div>
+
+      <!-- BOTON VOLVER A MENU PRINCIPAL -->
+      <button type="button" id="btnMenu">Menú principal</button>
+    </section>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../js/facts.js"></script>
+    <script src="../js/calculador.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

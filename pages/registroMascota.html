@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sitio oficial de veterinaria Bienestar Animal - Bahía Blanca. Pet shop | Alimentos balanceados | Accesorios | Consultorio veterinario | Cirugías | Ecografías | Laboratorio | Farmacia veterinaria | Peluquería canina | Envíos a domicilio."
+    />
+    <meta
+      name="keywords"
+      content="Veterinaria, Bienestar Animal, Pet Shop, Alimentos balanceados, Accesorios, Consultorio veterinario, Cirugías, Ecografías, Laboratorio, Farmacia veterinaria, Peluquería canina, Envíos a domicilio, Royal Canin, Pro Plan, Eukanuba, Excellent, Performance, Sieger, Maxxium, Agility, Old Prince, Kongo, Fawna, Vital Can, Balanced, Nutrique, Monami, Bahía Blanca"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/faviconBA-32x32.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Registro Mascota - Bienestar Animal</title>
+  </head>
+
+  <body>
+    <section class="programa">
+      <h1>Bienestar Animal</h1>
+      <h2>Registrar mascota</h2>
+
+      <!-- FOMRULARIO REGISTRO MASCOTA -->
+      <form class="mascotaForm" id="mascotaForm">
+        <p class="pLogin">
+          Para registrar una nueva mascota vamos a pedirte los siguientes datos:
+        </p>
+
+        <!-- Nombre del tutor -->
+        <label for="inputNombreTutor" class="labelNombreTutor"
+          >Nombre y apellido del tutor:</label
+        >
+        <input
+          type="text"
+          class="inputNombreTutor"
+          id="inputNombreTutor"
+          name="nombreTutor"
+          placeholder="Nombre completo del tutor"
+          required
+        />
+
+        <!-- Especie -->
+        <label for="inputEspecie" class="labelEspecie">Especie:</label>
+        <select
+          name="especie[]"
+          id="inputEspecie"
+          class="inputEspecie"
+          required
+        >
+          <option class="option" value="canino">Canino</option>
+          <option class="option" value="felino">Felino</option>
+        </select>
+
+        <!-- Raza -->
+        <label for="inputRaza" class="labelRaza">Raza:</label>
+        <input
+          type="text"
+          class="inputRaza"
+          id="inputRaza"
+          name="raza"
+          placeholder="Raza de la mascota"
+          required
+        />
+        <div id="resultados"></div>
+
+        <!-- Sexo -->
+        <label for="inputSexo" class="labelSexo">Sexo:</label>
+        <select name="sexo[]" id="inputSexo" class="inputSexo">
+          <option value="macho">Macho</option>
+          <option value="hembra">Hembra</option>
+        </select>
+
+        <!-- Nombre de la mascota -->
+        <label for="inputNombreMascota" class="labelNombreMascota"
+          >Nombre de la mascota:</label
+        >
+        <input
+          type="text"
+          class="inputNombreMascota"
+          id="inputNombreMascota"
+          name="nombreMascota"
+          placeholder="Nombre de la mascota"
+          required
+        />
+
+        <!-- Edad -->
+        <label for="inputEdad" class="labelEdad">Edad:</label>
+        <input
+          type="number"
+          class="inputEdad"
+          id="inputEdad"
+          name="edad"
+          required
+        />
+
+        <div id="edadMascota"></div>
+
+        <!-- Peso -->
+        <label for="inputPeso" class="labelPeso">Peso de la mascota:</label>
+        <input
+          type="number"
+          class="inputPeso"
+          id="inputPeso"
+          name="peso"
+          placeholder="Peso de la mascota"
+          required
+        />
+
+        <div id="pesoMascota"></div>
+
+        <!-- BOTON REGISTRAR MASCOTA -->
+        <button type="submit" id="btnSubmitMascota">Registrar mascota</button>
+
+        <div id="mascotaRegistrada"></div>
+      </form>
+
+      <!-- BOTON VOLVER A MENU PRINCIPAL -->
+      <button id="btnMenu">Menú principal</button>
+    </section>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../js/facts.js"></script>
+    <script src="../js/Mascota.js"></script>
+    <script src="../js/Usuario.js"></script>
+    <script src="../js/Veterinaria.js"></script>
+    <script src="../js/registroMascota.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sitio oficial de veterinaria Bienestar Animal - Bahía Blanca. Pet shop | Alimentos balanceados | Accesorios | Consultorio veterinario | Cirugías | Ecografías | Laboratorio | Farmacia veterinaria | Peluquería canina | Envíos a domicilio."
+    />
+    <meta
+      name="keywords"
+      content="Veterinaria, Bienestar Animal, Pet Shop, Alimentos balanceados, Accesorios, Consultorio veterinario, Cirugías, Ecografías, Laboratorio, Farmacia veterinaria, Peluquería canina, Envíos a domicilio, Royal Canin, Pro Plan, Eukanuba, Excellent, Performance, Sieger, Maxxium, Agility, Old Prince, Kongo, Fawna, Vital Can, Balanced, Nutrique, Monami, Provet, Canfeed, Catfeed, Perros, Gatos, Bahía Blanca"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/faviconBA-32x32.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Menú principal - Bienestar Animal</title>
+  </head>
+
+  <body>
+    <section class="programa">
+      <h1>Bienestar Animal</h1>
+      <h2>Menú principal</h2>
+
+      <!-- VER USUARIOS REGISTRADOS -->
+      <button id="btnVerUsuarios" class="btnVerUsuariosOculto">
+        Ver usuarios registrados
+      </button>
+      <div id="containerVerUsuarios"></div>
+
+      <template id="templateVerUsuarios">
+        <div class="verUsuariosStyle">
+          <h4>Usuarios registrados:</h4>
+          <p class="pVerUsuarios"></p>
+        </div>
+      </template>
+
+      <!-- BUSCAR USUARIO REGISTRADO -->
+      <button id="btnBuscarUsuario" class="">Buscar Usuario</button>
+      <div id="containerBuscarUsuario" class="hidden">
+        <section class="buscarUsuarioStyle">
+          <form id="formBuscarUsuario">
+            <h4>Buscar usuario registrado</h4>
+            <label for="name">Nombre completo:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Escriba el nombre completo"
+            />
+            <button type="submit" value="Buscar" id="buscar">Buscar</button>
+          </form>
+          <h4>Historial de búsqueda:</h4>
+          <div id="resultadoUsuario">
+            <template id="templateVerUsuario">
+              <p class="pBuscarUsuario"></p>
+            </template>
+          </div>
+        </section>
+      </div>
+
+      <!-- REGISTRAR USUARIO -->
+      <button id="btnRegistrarUsuario" class="">Registrar nuevo usuario</button>
+
+      <!-- VER MASCOTAS REGISTRADAS -->
+      <button id="btnVerMascotas" class="btnVerMascotasOculto">
+        Ver mascotas registradas
+      </button>
+
+      <div id="containerVerMascotas"></div>
+
+      <template id="templateVerMascotas">
+        <section class="verMascotasStyle">
+          <h4>Mascotas registradas:</h4>
+          <p class="pVerMascotas"></p>
+        </section>
+      </template>
+
+      <!-- BUSCAR MASCOTA -->
+      <button id="btnBuscarMascota" class="">Buscar mascota</button>
+
+      <div id="containerBuscarMascota" class="oculto">
+        <section class="buscarMascotaStyle">
+          <form id="formBuscarMascota">
+            <h4>Buscar mascota registrada</h4>
+            <label for="nameMascota">Nombre de la mascota:</label>
+            <input
+              type="text"
+              id="nameMascota"
+              name="name"
+              placeholder="Nombre de la mascota"
+            />
+            <label for="especieMascota" class="labelBuscarEspecie"
+              >Especie:</label
+            >
+            <select name="especie[]" id="especieMascota">
+              <option value="canino">Canino</option>
+              <option value="felino">Felino</option>
+            </select>
+
+            <button type="submit" value="Buscar" id="buscar">Buscar</button>
+          </form>
+          <h4>Historial de búsqueda:</h4>
+          <div id="resultadoMascota">
+            <template id="templateBuscarMascota">
+              <p class="pBuscarMascota"></p>
+            </template>
+          </div>
+        </section>
+      </div>
+
+      <!-- CALCULADOR ALIMENTO -->
+      <button id="btnCalculadorAlimento" class="">
+        Calculador de ración de alimento
+      </button>
+
+      <!-- REGISTRAR MASCOTA -->
+      <button id="btnRegistrarMascota" class="">Registrar nueva mascota</button>
+
+      <!-- SALIR -->
+      <button id="btnSalir" class="">Salir</button>
+
+      <!-- Usuario Logueado -->
+      <div id="userData"></div>
+    </section>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/facts.js"></script>
+    <script src="../js/Mascota.js"></script>
+    <script src="../js/Usuario.js"></script>
+    <script src="../js/Veterinaria.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

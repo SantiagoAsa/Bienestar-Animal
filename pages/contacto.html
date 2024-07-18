@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sitio oficial de veterinaria Bienestar Animal - Bahía Blanca. Pet shop | Alimentos balanceados | Accesorios | Consultorio veterinario | Cirugías | Ecografías | Laboratorio | Farmacia veterinaria | Peluquería canina | Envíos a domicilio."
+    />
+    <meta
+      name="keywords"
+      content="Veterinaria, Bienestar Animal, Pet Shop, Alimentos balanceados, Accesorios, Consultorio veterinario, Cirugías, Ecografías, Laboratorio, Farmacia veterinaria, Peluquería canina, Envíos a domicilio, Royal Canin, Pro Plan, Eukanuba, Excellent, Performance, Sieger, Maxxium, Agility, Old Prince, Kongo, Fawna, Vital Can, Balanced, Nutrique, Monami, Provet, Canfeed, Catfeed, Perros, Gatos, Bahía Blanca"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/faviconBA-32x32.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Contacto - Bienestar Animal</title>
+  </head>
+
+  <body>
+    <section class="programa">
+      <h1>Bienestar Animal</h1>
+      <h2>Contactate con nosotros</h2>
+
+      <!-- FORMULARIO CONTACTO -->
+      <!-- Nombre -->
+      <form id="formularioContacto">
+        <label for="nombre" class="labelContacto">Nombre y apellido:</label>
+        <input
+          type="text"
+          id="nombre"
+          class="inputContacto"
+          name="nombre"
+          placeholder="Nombre"
+          required
+        />
+
+        <!-- Email -->
+        <label for="email" class="labelEmail">E-mail:</label>
+        <input
+          type="email"
+          id="email"
+          class="inputEmail"
+          name="email"
+          placeholder="Email"
+          required
+        />
+
+        <!-- Cuerpo mensaje -->
+        <label for="mensaje" class="labelMensaje">Mensaje:</label>
+        <textarea
+          name="mensaje"
+          id="mensaje"
+          class="txtMensaje"
+          placeholder="Mensaje"
+          required
+        ></textarea>
+
+        <!-- BOTON ENVIAR FORMULARIO -->
+        <button id="btnEnviarContacto" class="btnEnviarContacto" type="submit">
+          Enviar
+        </button>
+
+        <!-- MENSAJE ENVIADO -->
+        <div id="mensajeContacto"></div>
+      </form>
+
+      <!-- BOTON VOLVER A INICIO -->
+      <button id="btnInicio">Volver a inicio</button>
+    </section>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../js/facts.js"></script>
+    <script src="../js/Usuario.js"></script>
+    <script src="../js/Veterinaria.js"></script>
+    <script src="../js/contacto.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
