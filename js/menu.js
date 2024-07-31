@@ -16,6 +16,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const buscarUser = document.getElementById('containerBuscarUsuario');
     const buscarMascota = document.getElementById('containerBuscarMascota');
     const formMascota = document.getElementById('formBuscarMascota');
+    const name = document.getElementById('name');
+    const resultadosUsuarios = document.getElementById('resultadosUsuarios');
+    let usuariosRegistrados = [];
+    const nameMascota = document.getElementById('nameMascota');
+    const resultadosMascotas = document.getElementById('resultadosMascotas');
+    let mascotasRegistradas = [];
+
 
 
     // ~~~ MENSAJE BIENVENIDA ~~~ //
@@ -47,6 +54,31 @@ document.addEventListener('DOMContentLoaded', function () {
     // ~~~ BUSCAR USUARIO REGISTRADO ~~~ //
     btnBuscarUsuario.addEventListener('click', () => {
         buscarUser.classList.toggle('hidden');
+    });
+
+    fetch('../data/usuarios.json')
+        .then(response => response.json())
+        .then(data => {
+            usuariosRegistrados = data.usuarios_registrados;
+        })
+        .catch(error => console.error('Error fetching usuarios:', error));
+
+    name.addEventListener('input', () => {
+        const ingreso = name.value.toLowerCase();
+        resultadosUsuarios.innerHTML = '';
+        if (ingreso.length > 0) {
+            const usuariosFiltradas = usuariosRegistrados.filter(usuarios => usuarios.toLowerCase().startsWith(ingreso));
+            usuariosFiltradas.forEach(usuarios => {
+                const div = document.createElement('div');
+                div.className = 'result-item';
+                div.textContent = usuarios;
+                div.addEventListener('click', () => {
+                    name.value = usuarios;
+                    resultadosUsuarios.innerHTML = '';
+                });
+                resultadosUsuarios.appendChild(div);
+            });
+        }
     });
 
     form.addEventListener('submit', (e) => {
@@ -90,6 +122,32 @@ document.addEventListener('DOMContentLoaded', function () {
     btnBuscarMascota.addEventListener('click', () => {
         buscarMascota.classList.toggle('oculto');
     });
+
+    fetch('../data/mascotas.json')
+        .then(response => response.json())
+        .then(data => {
+            mascotasRegistradas = data.mascotas_registradas;
+        })
+        .catch(error => console.error('Error fetching mascotas:', error));
+
+    nameMascota.addEventListener('input', () => {
+        const ingreso = nameMascota.value.toLowerCase();
+        resultadosMascotas.innerHTML = '';
+        if (ingreso.length > 0) {
+            const mascotasFiltradas = mascotasRegistradas.filter(mascotas => mascotas.toLowerCase().startsWith(ingreso));
+            mascotasFiltradas.forEach(mascotas => {
+                const div = document.createElement('div');
+                div.className = 'result-item';
+                div.textContent = mascotas;
+                div.addEventListener('click', () => {
+                    nameMascota.value = mascotas;
+                    resultadosMascotas.innerHTML = '';
+                });
+                resultadosMascotas.appendChild(div);
+            });
+        }
+    });
+    
 
     formMascota.addEventListener('submit', (e) => {
         e.preventDefault();

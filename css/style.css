@@ -410,6 +410,15 @@ p {
   opacity: 0;
 }
 
+#resultadosUsuarios {
+  color: var(--text-color);
+  background-color: #808080;
+  max-height: 150px;
+  overflow: auto;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 /* ~~~~~ AGREGAR USUARIO ~~~~~ */
 
 #agregarForm {
@@ -540,6 +549,16 @@ p {
   font-size: 1rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+#resultadosMascotas {
+  color: var(--text-color);
+  background-color: #808080;
+  max-height: 150px;
+  overflow: auto;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 
 /* ~~~~~ REGISTRO MASCOTA ~~~~~ */
 

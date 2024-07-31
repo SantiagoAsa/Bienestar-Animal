@@ -1,0 +1,17 @@
+{
+    "datos_usuarios": [
+        {"nombreCompleto": "santiago asa", "correoElectronico": "santiagoasa@gmail.com", "nombreUsuario": "santi", "password": "123"},
+        {"nombreCompleto": "leticia nicasio", "correoElectronico": "leticia_nicasio@gmail.com", "nombreUsuario": "leti", "password": "8910"},
+        {"nombreCompleto": "damian tumine", "correoElectronico": "tuminedamian@gmail.com", "nombreUsuario": "damian", "password": "456"},
+        {"nombreCompleto": "tomas rodriguez", "correoElectronico": "tomas.rod@hotmail.com", "nombreUsuario": "tomy", "password": "678"},
+        {"nombreCompleto": "norma tisera", "correoElectronico": "norma.tisera@gmail.com", "nombreUsuario": "norma", "password": "131415"},
+        {"nombreCompleto": "claudia iribarne", "correoElectronico": "ciribarne@gmail.com", "nombreUsuario": "claudia", "password": "101112"},
+        {"nombreCompleto": "juan gomez", "correoElectronico": "gomez_j@hotmail.com", "nombreUsuario": "qwerty", "password": "999"},
+        {"nombreCompleto": "lorena gutierrez", "correoElectronico": "loreguti_1979@gmail.com", "nombreUsuario": "loreg", "password": "444"},
+        {"nombreCompleto": "ramon scalpo", "correoElectronico": "scalporamon@yahoo.com.ar", "nombreUsuario": "ramon77", "password": "ramscal"},
+        {"nombreCompleto": "julia gonzalez", "correoElectronico": "no tiene", "nombreUsuario": "juliagon", "password": "ju11go"},
+        {"nombreCompleto": "esteban guzman", "correoElectronico": "guzman.empresa@gmail.com", "nombreUsuario": "guzguz", "password": "123eg"},
+        {"nombreCompleto": "pepe crack", "correoElectronico": "pepe@mail.com", "nombreUsuario": "pepe", "password": "pepe"},
+        {"nombreCompleto": "profesional veterinario", "correoElectronico": "bienestaranimal@yahoo.com.ar", "nombreUsuario": "admin", "password": "admin"}
+    ]
+}
